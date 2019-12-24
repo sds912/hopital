@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Service{% endblock %}
+
+{% block body %}
+    <h1>Editer un le medecin imtricule <span>{{medecin.matricule}}</span></h1>
+
+    {{ include('medecin/_form.html.twig', {'button_label': 'Update'}) }}
+{% endblock %}

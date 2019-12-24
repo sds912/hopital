@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+<div class="p-3 bg-white">
+    <h3 class="mb-3">Liste des medecins</h3>
+
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Matricule</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Telephone</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for medecin in medecins %}
+          <tr>
+            <td>{{medecin.matricule}}</td>
+            <td>{{medecin.nom}}</td>
+            <td>{{medecin.prenom}}</td>
+            <td>{{medecin.telephone}}</td>
+            <td>{{medecin.email | slice(0, 30)}}</td>
+            <td>
+                <a href="{{ path('medecin_edit', {'id': medecin.id}) }}" class="btn btn-sm">Editer</a>
+                {{ include('medecin/_delete_form.html.twig') }}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+ </div>
+{% endblock %}

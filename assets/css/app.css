@@ -1,0 +1,21 @@
+body {
+    background-color: lightgray;
+}
+
+.options{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+    
+}
+
+.options:hover{
+    opacity: .7;
+
+}
+
+.options-btn{
+    padding: .5rem;
+    background-color: #fff;
+    position: absolute;
+}

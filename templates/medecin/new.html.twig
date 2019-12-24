@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter Medecin{% endblock %}
+
+{% block body %}
+   <div class="container-fluid px-5 my-5">
+     <div class="row">
+       <div class="col-sm-8">
+            <div class="p-3 bg-white">
+               <h3 class="mb-4">Ajouter un Medecin</h3>
+                {{ include("medecin/_form.html.twig") }}
+            </div>
+       </div>
+       <div class="col-sm-4">
+        
+       </div>
+     </div>
+   </div>
+
+  
+
+{% endblock %}
